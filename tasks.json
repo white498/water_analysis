@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe 编译多文件项目",
+			"command": "D:\\msys2-x86\\ucrt64\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"main.c",
+				"dataset.c",
+				"query.c",
+				"modify.c",
+				"backup.c",
+				"common.c",
+				"-o",
+				"water_analysis.exe"
+			],
+			"options": {
+				// 关键修改1：把工作目录设为项目根目录
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "编译器: D:\\msys2-x86\\ucrt64\\bin\\gcc.exe"
+		}
+	]
+}
